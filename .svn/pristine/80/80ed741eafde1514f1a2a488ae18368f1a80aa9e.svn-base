@@ -1,0 +1,9 @@
+<xml>
+    <ToUserName><![CDATA[oydEOt2x7hH4zHQA8k2VVEqHK5jY]]></ToUserName>
+    <FromUserName><![CDATA[toUser]]></FromUserName>
+    <CreateTime>1390194712.55</CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    
+    <Content><![CDATA[{u&#39;code&#39;: 200, u&#39;data&#39;: u&#39;\u8ba2\u5355\u5df2\u7ecf\u6210\u529f\u8bfb\u53d6&#39;, u&#39;success&#39;: True}]]></Content>
+
+</xml>

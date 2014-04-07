@@ -1,0 +1,15 @@
+<xml>
+    <ToUserName><![CDATA[fromUser]]></ToUserName>
+    <FromUserName><![CDATA[toUser]]></FromUserName>
+    <CreateTime>1389869864.62</CreateTime>
+    <MsgType><![CDATA[news]]></MsgType>
+    <ArticleCount>1</ArticleCount>
+    <Articles>
+        <item>
+            <Title><![CDATA[关于我们]]></Title>
+            <Description><![CDATA[我靠]]></Description>
+            <PicUrl><![CDATA[http://img5.douban.com/lpic/s25812589.jpg]]></PicUrl>
+            <Url><![CDATA[http://www.csdn.net/company/about.html]]></Url>
+        </item>
+    </Articles>
+</xml>

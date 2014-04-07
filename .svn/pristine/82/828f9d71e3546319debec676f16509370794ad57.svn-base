@@ -1,0 +1,30 @@
+{"success":false,"code":0,"data":"\u8fd8\u6ca1\u6709\u7ed1\u5b9a"}<script type="text/javascript">
+/*<![CDATA[*/
+if(typeof(console)=='object')
+{
+	console.group("Application Log");
+	console.log("[09:12:32.216][trace][system.CModule] Loading \"log\" application component\nin /home/ssj/mydocumate/index.php (18)");
+	console.log("[09:12:32.217][trace][system.CModule] Loading \"session\" application component\nin /home/ssj/mydocumate/index.php (18)");
+	console.log("[09:12:32.217][trace][system.CModule] Loading \"translate\" application component\nin /home/ssj/mydocumate/index.php (18)");
+	console.log("[09:12:32.218][trace][system.CModule] Loading \"user\" application component\nin /home/ssj/mydocumate/protected/modules/translate/components/MPTranslate.php (191)\nin /home/ssj/mydocumate/protected/modules/translate/components/MPTranslate.php (54)\nin /home/ssj/mydocumate/index.php (18)");
+	console.log("[09:12:32.219][trace][system.db.ar.CActiveRecord] User.findByPk()\nin /home/ssj/mydocumate/protected/components/WebUser.php (25)\nin /home/ssj/mydocumate/protected/modules/translate/components/MPTranslate.php (191)\nin /home/ssj/mydocumate/protected/modules/translate/components/MPTranslate.php (54)");
+	console.log("[09:12:32.219][trace][system.CModule] Loading \"db\" application component\nin /home/ssj/mydocumate/protected/components/WebUser.php (25)\nin /home/ssj/mydocumate/protected/modules/translate/components/MPTranslate.php (191)\nin /home/ssj/mydocumate/protected/modules/translate/components/MPTranslate.php (54)");
+	console.log("[09:12:32.219][trace][system.db.CDbConnection] Opening DB connection\nin /home/ssj/mydocumate/protected/components/WebUser.php (25)\nin /home/ssj/mydocumate/protected/modules/translate/components/MPTranslate.php (191)\nin /home/ssj/mydocumate/protected/modules/translate/components/MPTranslate.php (54)");
+	console.log("[09:12:32.221][trace][system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `global_user`\nin /home/ssj/mydocumate/protected/components/WebUser.php (25)\nin /home/ssj/mydocumate/protected/modules/translate/components/MPTranslate.php (191)\nin /home/ssj/mydocumate/protected/modules/translate/components/MPTranslate.php (54)");
+	console.log("[09:12:32.223][trace][system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `global_user`\nin /home/ssj/mydocumate/protected/components/WebUser.php (25)\nin /home/ssj/mydocumate/protected/modules/translate/components/MPTranslate.php (191)\nin /home/ssj/mydocumate/protected/modules/translate/components/MPTranslate.php (54)");
+	console.log("[09:12:32.224][trace][system.db.CDbCommand] Querying SQL: SELECT * FROM `global_user` `t` WHERE `t`.`id` IS NULL LIMIT 1\nin /home/ssj/mydocumate/protected/components/WebUser.php (25)\nin /home/ssj/mydocumate/protected/modules/translate/components/MPTranslate.php (191)\nin /home/ssj/mydocumate/protected/modules/translate/components/MPTranslate.php (54)");
+	console.log("[09:12:32.224][trace][system.CModule] Loading \"request\" application component\nin /home/ssj/mydocumate/protected/modules/translate/components/MPTranslate.php (203)\nin /home/ssj/mydocumate/protected/modules/translate/components/MPTranslate.php (54)\nin /home/ssj/mydocumate/index.php (18)");
+	console.log("[09:12:32.225][trace][system.CModule] Loading \"urlManager\" application component\nin /home/ssj/mydocumate/index.php (18)");
+	console.log("[09:12:32.225][trace][system.CModule] Loading \"cache\" application component\nin /home/ssj/mydocumate/index.php (18)");
+	console.log("[09:12:32.225][trace][system.db.CDbCommand] Executing SQL: DELETE FROM yii_cache WHERE expire>0 AND expire<1390180352\nin /home/ssj/mydocumate/index.php (18)");
+	console.log("[09:12:32.226][trace][system.db.CDbCommand] Querying SQL: SELECT value FROM yii_cache WHERE id=\'605c1558228b7fc9c7d71d4055440cce\' AND (expire=0 OR expire>1390180352)\nin /home/ssj/mydocumate/index.php (18)");
+	console.log("[09:12:32.226][trace][system.caching.CDbCache] Serving \"Yii.CUrlManager.rules\" from cache\nin /home/ssj/mydocumate/index.php (18)");
+	console.log("[09:12:32.227][trace][system.CModule] Loading \"viewRenderer\" application component\nin /home/ssj/mydocumate/protected/components/Controller.php (32)\nin /home/ssj/mydocumate/index.php (18)");
+	console.log("[09:12:32.230][trace][system.db.ar.CActiveRecord] UserSns.findByAttributes()\nin /home/ssj/mydocumate/protected/controllers/WeChatController.php (16)\nin /home/ssj/mydocumate/index.php (18)");
+	console.log("[09:12:32.230][trace][system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `global_user_sns`\nin /home/ssj/mydocumate/protected/controllers/WeChatController.php (16)\nin /home/ssj/mydocumate/index.php (18)");
+	console.log("[09:12:32.231][trace][system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `global_user_sns`\nin /home/ssj/mydocumate/protected/controllers/WeChatController.php (16)\nin /home/ssj/mydocumate/index.php (18)");
+	console.log("[09:12:32.232][trace][system.db.CDbCommand] Querying SQL: SELECT * FROM `global_user_sns` `t` WHERE `t`.`sns_type`=:yp0 AND `t`.`sns_user_id`=:yp1 LIMIT 1\nin /home/ssj/mydocumate/protected/controllers/WeChatController.php (16)\nin /home/ssj/mydocumate/index.php (18)");
+	console.groupEnd();
+}
+/*]]>*/
+</script>

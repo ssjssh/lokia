@@ -1,0 +1,42 @@
+#-*— coding:UTF-8 -*-
+#/usr/bin/env python
+"""
+module descript
+"""
+import time
+
+from django.shortcuts import render_to_response
+
+
+class BaseResponse(object):
+    """
+    这个类类似于Django的通用视图，response_name是要输出的消息模版
+    msg是用户输入消息的一个字典,如果要自定义消息，只要自定义context
+    就可以了，消息内容格式由微信官方指定
+    """
+    response_type = "application/xml"
+    template_name = None
+
+    def __init__(self, msg):
+        self.msg = msg
+        self.template_context = {'ToUserName': msg['FromUserName'],
+                                 'FromUserName': msg['ToUserName'],
+                                 'CreateTime': time.time()}
+
+    def get_response(self, context=None):
+        if context:
+            self.template_context.update(context)
+        res = render_to_response(self.template_name, context=self.template_context,
+                                 content_type=self.response_type)
+        return res
+
+
+class TextResponse(BaseResponse):
+    template_name = "/lib/text_response.xml"
+
+
+class MusicResponse(BaseResponse):
+    template_name = "/lib/music_response.xml"
+
+
+

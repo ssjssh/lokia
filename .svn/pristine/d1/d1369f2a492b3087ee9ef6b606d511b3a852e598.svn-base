@@ -1,0 +1,32 @@
+#-*— coding:UTF-8 -*-
+#/usr/bin/env python
+import json
+from django.views.decorators import csrf
+from lib.utils import parse_request, post
+from lib.response import BaseResponse
+import token
+
+"""
+module descript
+"""
+
+
+@csrf.csrf_exempt
+@parse_request
+def about(msg):
+    resp = BaseResponse(msg, "about.xml")
+    return resp.get_response()
+
+
+@csrf.csrf_exempt
+@parse_request
+def contact(msg):
+    resp = BaseResponse(msg, "contact.xml")
+    return resp.get_response()
+
+
+@csrf.csrf_exempt
+@parse_request
+def order(msg):
+    context = {"openid": msg['FromUserName']}
+    return BaseResponse(msg).get_response(context)

@@ -1,0 +1,47 @@
+#-*— coding:UTF-8 -*-
+#/usr/bin/env python
+"""
+module descript
+"""
+import urllib2
+from django.utils.encoding import smart_str
+import xml.etree.ElementTree as ET
+
+
+def download(url):
+    req = urllib2.Request(url=url)
+    read_data = urllib2.urlopen(req).read()
+    return read_data
+
+
+def parase_msg_xml(root_elem):
+    msg = {}
+    if root_elem.tag == 'xml':
+        for child in root_elem:
+            msg[child.tag] = smart_str(child.text)
+    return msg
+
+
+def get_template_path(name):
+    from mysite import settings
+    path = settings.TEMPLATE_DIRS[0]
+    return path+name
+
+
+def parase_request(f):
+    """
+    一个修饰器，用来解析微信服务器传递的数据
+    一般建议在一个view函数的最后使用这个修饰器
+    因为可能有其他的修饰器对request进行解析
+    """
+    def warpper(request, *args, **kwargs):
+        raw_str = smart_str(request.body)
+        msg = parase_msg_xml(ET.fromstring(raw_str))
+        return f(msg, *args, **kwargs)
+    return warpper
+
+
+
+
+
+

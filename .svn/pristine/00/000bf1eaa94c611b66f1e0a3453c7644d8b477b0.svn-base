@@ -1,0 +1,37 @@
+#-*— coding:UTF-8 -*-
+#/usr/bin/env python
+import json
+from django.views.decorators import csrf
+from lib.utils import parse_request, post
+from lib.response import BaseResponse
+import token
+"""
+module descript
+"""
+
+
+@csrf.csrf_exempt
+@parse_request
+def about(msg):
+    resp = BaseResponse(msg, "about.xml")
+    return resp.get_response()
+
+
+@csrf.csrf_exempt
+@parse_request
+def contact(msg):
+    resp = BaseResponse(msg, "contact.xml")
+    return resp.get_response()
+
+@csrf.csrf_exempt
+@parse_request
+def order(msg):
+    is_binding_url = "http://npeasy.com:10002/weiChat/isBind"
+    order_list_url = "http://npeasy.com:10002/weiChat/orderList"
+    # is_binding = json.loads(post(is_binding_url, msg['FromUserName']))
+    # if is_binding["bind"]:
+    #     order_list = json.loads(post(order_list_url, msg['FromUserName']))
+    # else:
+    link_str = '你还没有绑定mydocumate帐号，请绑定<a href="http://lokia.sinaapp.com/login/"></a>'
+    context = {"Content": link_str}
+    return BaseResponse(msg,"lib/text_response.xml").get_response(context)

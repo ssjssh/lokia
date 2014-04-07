@@ -1,0 +1,35 @@
+#-*— coding:UTF-8 -*-
+#/usr/bin/env python
+import json
+from django.views.decorators import csrf
+from lib.utils import parse_request, post
+from lib.response import BaseResponse
+import token
+
+"""
+module descript
+"""
+
+
+@csrf.csrf_exempt
+@parse_request
+def about(msg):
+    resp = BaseResponse(msg, "about.xml")
+    return resp.get_response()
+
+
+@csrf.csrf_exempt
+@parse_request
+def contact(msg):
+    print msg
+    resp = BaseResponse(msg, "contact.xml")
+    return resp.get_response()
+
+
+@csrf.csrf_exempt
+@parse_request
+def order(msg):
+    print msg
+    link_str = """你还没有绑定mydocumate帐号，请绑定<a href="http://lokia.sinaapp.com/login/">"""
+    context = {"Content": link_str}
+    return BaseResponse(msg).get_response(context)

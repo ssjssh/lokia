@@ -1,0 +1,9 @@
+libraries:
+- name: "django"
+  version: "1.4"
+
+cron:
+    - description: use cron to create weixing menu
+      url: /index/?com=menu
+      schedule:  every day of month 00:20
+      timezone: Beijing

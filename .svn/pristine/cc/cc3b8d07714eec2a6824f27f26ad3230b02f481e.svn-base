@@ -1,0 +1,23 @@
+#-*— coding:UTF-8 -*-
+#/usr/bin/env python
+"""
+module descript
+"""
+import requests
+import os
+import sys
+
+reload(sys)
+sys.setdefaultencoding('UTF-8')
+
+xml = """<xml>
+ <ToUserName><![CDATA[toUser]]></ToUserName>
+ <FromUserName><![CDATA[fromUser]]></FromUserName>
+ <CreateTime>1348831860</CreateTime>
+ <MsgType><![CDATA[text]]></MsgType>
+ <Content><![CDATA[this is a test]]></Content>
+ <MsgId>1234567890123456</MsgId>
+ </xml>"""
+headers = {'Content-Type': 'application/xml'}
+file = open("reponse.html", "w")
+print >>file,requests.post('http://lokia.sinaapp.com/text/', data=xml, headers=headers).text

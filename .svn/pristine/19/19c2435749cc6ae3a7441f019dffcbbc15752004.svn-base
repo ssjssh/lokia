@@ -1,0 +1,18 @@
+<xml>
+    <ToUserName><![CDATA[oydEOt2x7hH4zHQA8k2VVEqHK5jY]]></ToUserName>
+    <FromUserName><![CDATA[toUser]]></FromUserName>
+    <CreateTime>1393223629.29</CreateTime>
+    <MsgType><![CDATA[news]]></MsgType>
+    
+    <ArticleCount>1</ArticleCount>
+    <Articles>
+        
+    <item>
+        <Title><![CDATA[没有绑定]]></Title>
+        <Description><![CDATA[如果你想吧你的mysocumate的账户和微信号绑定，请点击原文链接]]></Description>
+        <Url><![CDATA[http://npeasy.com:10002/weChat/seekBinding/?openid=oydEOt2x7hH4zHQA8k2VVEqHK5jY]]></Url>
+    </item>
+
+    </Articles>
+
+</xml>

@@ -1,0 +1,44 @@
+#-*— coding:UTF-8 -*-
+#/usr/bin/env python
+"""
+module descript
+"""
+import xml.etree.ElementTree as ET
+
+from django.utils.encoding import smart_str
+from django.http import HttpResponse
+
+from utils import parase_msg_xml
+
+
+def getReply(msg, replyContent):
+    import time
+
+    extTpl = "<xml><ToUserName><![CDATA[%s]]></ToUserName><FromUserName><![CDATA[%s]]></FromUserName><CreateTime>%s</CreateTime><MsgType><![CDATA[%s]]></MsgType><Content><![CDATA[%s]]></Content><FuncFlag>0</FuncFlag></xml>";
+    extTpl = extTpl % (msg['FromUserName'], msg['ToUserName'], str(int(time.time())), 'text', replyContent)
+    return HttpResponse(extTpl, content_type="application/xml")
+
+
+class DispatcherMiddleware(object):
+    def process_request(self, request):
+        if 'com' in request.GET:
+            return None
+        if request.method == 'GET':
+            request.path_info = '/check_signature/'
+            return None
+        elif request.method == 'POST':
+            raw_str = smart_str(request.body)
+            msg = parase_msg_xml(ET.fromstring(raw_str))
+            msg_type = msg['MsgType']
+            path_info = '/' + msg_type + '/'
+            if msg_type == 'event':
+                path_info += msg['Event']
+                path_info += '/'
+                if 'EventKey' in msg:
+                    path_info += msg['EventKey']
+                    path_info += '/'
+            request.path_info = path_info
+            # return getReply(msg, path_info)
+            return None
+        else:
+            return HttpResponse('None')

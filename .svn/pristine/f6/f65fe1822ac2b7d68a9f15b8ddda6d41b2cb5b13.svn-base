@@ -1,0 +1,17 @@
+#-*— coding:UTF-8 -*-
+#/usr/bin/env python
+"""
+module descript
+"""
+def test(f, num):
+    def test1():
+        f()
+        print num
+    return test1
+
+
+@test(10)
+def tr():
+    print("media")
+
+tr()
