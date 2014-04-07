@@ -15,11 +15,11 @@ customer_post_msg = {"openid": 11000,
 file = open("webresponse.html", "w")
 customer_msg = {
     "touser": "OPENID",
-    "msgtype":"text",
+    "msgtype": "text",
     "text":
-    {
-         "content":"Hello World"
-    }
+        {
+            "content": "Hello World"
+        }
 }
-print >>file,requests.post('http://lokia.sinaapp.com/get_customer_msg/',
-                           data=customer_post_msg).text
+print >> file, requests.post('http://lokia.sinaapp.com/get_customer_msg/',
+                             data=customer_post_msg).text
