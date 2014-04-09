@@ -1,7 +1,0 @@
-<xml>
-    <ToUserName><![CDATA[%(ToUserName)s]]></ToUserName>
-    <FromUserName><![CDATA[%(FromUserName)s]]></FromUserName>
-    <CreateTime>%(CreateTime)f</CreateTime>
-    <MsgType><![CDATA[text]]></MsgType>
-    <Content><![CDATA[%(Content)s]]></Content>
-</xml>

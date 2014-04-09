@@ -1,9 +1,0 @@
-{% extends "lib/news.xml" %}
-{% block articles %}
-    <item>
-        <Title><![CDATA[没有绑定]]></Title>
-        <Description><![CDATA[如果你想吧你的mysocumate的账户和微信号绑定，请点击原文链接]]></Description>
-        <PicUrl><![CDATA[#]]></PicUrl>
-        <Url><![CDATA[http://lokia.sinaapp.com/login/]]></Url>
-    </item>
-{% endblock %}

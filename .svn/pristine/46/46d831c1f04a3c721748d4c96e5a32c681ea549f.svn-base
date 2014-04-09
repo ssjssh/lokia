@@ -1,9 +1,0 @@
-{% extends "base.xml" %}
-{% block type %}news{% endblock %}
-{% block content %}
-    <ArticleCount>{% block news_num %}1{% endblock %}</ArticleCount>
-    <Articles>
-        {% block articles %}
-        {% endblock %}
-    </Articles>
-{% endblock %}

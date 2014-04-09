@@ -1,7 +1,0 @@
-<xml>
-    <ToUserName><![CDATA[FromUser]]></ToUserName>
-    <FromUserName><![CDATA[toUser]]></FromUserName>
-    <CreateTime>1390116495.08</CreateTime>
-    <MsgType><![CDATA[text]]></MsgType>
-    <Content><![CDATA[你还没有绑定mydocumate帐号，请绑定&lt;a href=&quot;http://lokia.sinaapp.com/login/&quot;&gt;&lt;/a&gt;]]></Content>
-</xml>

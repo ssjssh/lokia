@@ -1,5 +1,0 @@
-{% extends "lib/base.xml" %}
-{% block type %}text{% endblock %}
-{% block content %}
-    <Content><![CDATA[{{ Content }}]]></Content>
-{% endblock %}
